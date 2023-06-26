@@ -1,0 +1,196 @@
+/* body {
+    background-image: url(assets/bg-mobile-dark\ \(1080x1920\).jpg); 
+    background-repeat: no repeat; elimina repetição da imagem
+    background-position: top center; alinha a imagem ao centro dos eixos x e y
+    background-size: cover; cobrir todo o espaço visível
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* medida através da borda */
+}
+
+:root {
+  --text-color: white;
+  --bg-rad-grad: 55, 55, 55;
+  --bg-url-switch: url(assets/moon-stars.svg);
+  --stroke-color: 255, 255, 255;
+  --surface-color: 255, 255, 255;
+  --surface-color-hover: 255, 255, 255;
+  --highlight-color: 255, 255, 255;
+}
+
+.light {
+  --text-color: black;
+  --bg-rad-grad: 255, 255, 255;
+  --bg-url-switch: url(assets/sun.svg);
+  --stroke-color: 55, 55, 55;
+  --surface-color: 0, 0, 0;
+  --surface-color-hover: 0, 0, 0;
+  --highlight-color: 0, 0, 0;
+}
+
+body {
+  background: radial-gradient(
+      rgba(var(--bg-rad-grad), 0.6),
+      rgba(var(--bg-rad-grad), 0.8)
+    ),
+    url(assets/joan-gamell-ZS67i1HLllo-unsplash.jpg) no-repeat top center/auto;
+  /* propriedade do fundo: url da imagem de fundo       repetição da imagem  posição da img/cobertura img  */
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0;
+}
+
+#fotoGui {
+  border-radius: 50%;
+  width: 112px;
+  margin: auto;
+  display: block;
+  /* elementos inline eu não aplico margin:auto -> obrigatoriamente precisa ser block */
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#switch{
+
+  width: 64px;
+
+  position: relative;
+  /* o absolute é relativo a este elemento */
+
+  margin: 4px auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--bg-url-switch) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    left: 0;
+    position: absolute;
+    /* libera o z-index */
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    /* move o elemento para cima ou baixo (Y) */
+}
+
+.light #switch button{
+  right: 0;
+  left: initial;
+}
+
+#switch span{
+  display: block;
+
+  width: 64px;
+  height: 24px;
+
+  background-color: rgba(var(--surface-color));
+
+  border: 1px solid rgba(var(--stroke-color));
+
+  --webkit-backdrop-filter: blur(4px);
+
+  border-radius: 9999px;
+}
+
+/* links */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  /*trabalha com os elementos da caixa fiquem um ao lado do outro, se encaixando ao espaço definido*/
+  align-items: center; /* centraliza no centro vertical */
+  justify-content: center; /*  centraliza no centro horizontal */
+
+  padding: 16px 24px;
+
+  background: rgba(var(--surface-color), 0.1);
+  /* stroke-color-dark-mode */
+
+  border: 1px solid rgba(var(--stroke-color), 0.5); /* 4° prop é o alpha (transparencia) */
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px); /* insere blur no elemento */
+  -webkit-backdrop-filter: blur(
+    4px
+  ); /* -webkit- é pra uisar em outros navegadores */
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s; /* sempre no elemento sem hover */
+}
+
+ul li a:hover {
+  background: rgba(var(--surface-color-hover), 0.05);
+  /* stroke-color-dark-mode */
+
+  border: 1.5px solid var(--text-color); /* 4° prop é o alpha (transparencia) */
+}
+
+/* social links */
+
+#social_links {
+  display: flex;
+  gap: 16px;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+
+  justify-content: center;
+}
+
+#social_links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.3s;
+  border-radius: 50%;
+}
+
+#social_links a:hover {
+  background: rgba(var(--highlight-color), 0.2);
+  padding: 16px;
+}
+
+footer {
+  padding: 24px 0;
+
+  display: flex;
+  justify-content: center;
+
+  font-size: 14px;
+}
