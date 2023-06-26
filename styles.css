@@ -70,8 +70,7 @@ body * {
   margin-top: 8px;
 }
 
-#switch{
-
+#switch {
   width: 64px;
 
   position: relative;
@@ -80,27 +79,34 @@ body * {
   margin: 4px auto;
 }
 
-#switch button{
-    width: 32px;
-    height: 32px;
-    background: white var(--bg-url-switch) no-repeat center;
-    border: 0;
-    border-radius: 50%;
-    left: 0;
-    position: absolute;
-    /* libera o z-index */
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-    /* move o elemento para cima ou baixo (Y) */
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--bg-url-switch) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  left: 0;
+  position: absolute;
+  /* libera o z-index */
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  /* move o elemento para cima ou baixo (Y) */
+
+  animation: slide-back 0.2s;
 }
 
-.light #switch button{
-  right: 0;
-  left: initial;
+#switch button:hover {
+  outline: 8px solid rgba(var(--highlight-color), 0.2);
+  transition: 0.1s;
 }
 
-#switch span{
+.light #switch button {
+  animation: slide-in 0.2s forwards;
+  /* animação criada na @keyframes e o forwards mantem as properties depois do slide-in*/
+}
+
+#switch span {
   display: block;
 
   width: 64px;
@@ -193,4 +199,25 @@ footer {
   justify-content: center;
 
   font-size: 14px;
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+/* at rule nome
+  conteudo
+*/
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0%;
+  }
 }
