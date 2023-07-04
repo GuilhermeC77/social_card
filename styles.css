@@ -26,7 +26,7 @@
   --text-color: black;
   --bg-rad-grad: 255, 255, 255;
   --bg-url-switch: url(assets/sun.svg);
-  --stroke-color: 55, 55, 55;
+  --stroke-color: 0, 0, 0;
   --surface-color: 0, 0, 0;
   --surface-color-hover: 0, 0, 0;
   --highlight-color: 0, 0, 0;
@@ -37,7 +37,7 @@ body {
       rgba(var(--bg-rad-grad), 0.5),
       rgba(var(--bg-rad-grad), 0.6)
     ),
-    url(assets/683980.png) no-repeat top center/auto;
+    url(assets/pxfuel\ \(2\).jpg) no-repeat top center/auto;
   /* propriedade do fundo: url da imagem de fundo       repetição da imagem  posição da img/cobertura img  */
 }
 
