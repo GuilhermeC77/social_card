@@ -138,7 +138,7 @@ ul li a {
   align-items: center; /* centraliza no centro vertical */
   justify-content: center; /*  centraliza no centro horizontal */
 
-  padding: 16px 24px;
+  padding: 20px 24px;
 
   background: rgba(var(--surface-color), 0.1);
   /* stroke-color-dark-mode */
@@ -172,7 +172,7 @@ ul li a:hover {
 
   padding: 24px 0;
 
-  font-size: 24px;
+  font-size: 30px;
 
   justify-content: center;
 }
