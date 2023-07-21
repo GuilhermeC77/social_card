@@ -1,13 +1,17 @@
-function toggleMode(){
-    const html = document.documentElement
+function toggleMode() {
+  const html = document.documentElement;
 
-    /* if(html.classList.contains('light') ){
+  html.classList.toggle("light");
 
-        html.classList.remove('light')
+  const image = document.getElementById("fotoGui");
 
-    } else{
-        html.classList.add('light')
-    } */
+  if (html.classList.contains("light")) {
+    image.setAttribute('src', './assets/Guilherme Cruz - Sun.svg');
+  } else {
+    image.setAttribute('src', './assets/Guilherme Cruz.svg');
+  }
 
-    html.classList.toggle('light')
+  //pegar tag img
+
+  //substituir imagem
 }

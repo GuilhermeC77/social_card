@@ -20,16 +20,18 @@
   --surface-color: 255, 255, 255;
   --surface-color-hover: 255, 255, 255;
   --highlight-color: 255, 255, 255;
+  --bg-img: url(assets/pxfuel\ \(3\).jpg);
 }
 
 .light {
   --text-color: black;
-  --bg-rad-grad: 255, 255, 255;
+  --bg-rad-grad: 150, 150, 150;
   --bg-url-switch: url(assets/sun.svg);
   --stroke-color: 0, 0, 0;
   --surface-color: 0, 0, 0;
   --surface-color-hover: 0, 0, 0;
   --highlight-color: 0, 0, 0;
+  --bg-img: url(assets/pxfuel\ \(4\).jpg);
 }
 
 body {
@@ -39,7 +41,7 @@ body {
       rgba(var(--bg-rad-grad), 0.5),
       rgba(var(--bg-rad-grad), 0.6)
     ),
-    url(assets/pxfuel\ \(2\).jpg) no-repeat top center/auto;
+    var(--bg-img) no-repeat top center/auto;
   /* propriedade do fundo: url da imagem de fundo       repetição da imagem  posição da img/cobertura img  */
 }
 
